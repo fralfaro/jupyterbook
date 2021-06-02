@@ -1,0 +1,401 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programación &#8212; Introducción básica a python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="shortcut icon" href="../_static/logo_python.jpeg"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Bienvenido(a) a python_intro!" href="../index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo_python.jpeg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introducción básica a python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Bienvenido(a) a python_intro!
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Introducción
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Programación
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/python_intro/intro_progra.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://gitlab.com/FAAM/python_intro"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algoritmos">
+   Algoritmos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#componentes-de-un-algoritmo">
+     Componentes de un algoritmo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#como-describir-un-algoritmo">
+     Cómo describir un algoritmo
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="programacion">
+<h1>Programación<a class="headerlink" href="#programacion" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>Se suele decir que una persona no entiende algo de verdad hasta que puede explicárselo a otro. En realidad, no lo entiende de verdad hasta que puede explicárselo a un computador`. — <strong>Donald Knuth</strong>.</p>
+</div></blockquote>
+<p>Si tuvieramos que resumir el propósito de la programación en una frase, ésta debería ser:</p>
+<blockquote>
+<div><p>que el computador haga el trabajo por nosotros.</p>
+</div></blockquote>
+<p>Los computadores son buenos para hacer tareas rutinarias. Idealmente, cualquier problema tedioso y repetitivo debería ser resuelto por un computador, y los seres humanos sólo deberíamos encargarnos de los problemas realmente interesantes: los que requieren creatividad, pensamiento crítico y subjetividad.</p>
+<p>La <strong>programación</strong> es el proceso de transformar un método para resolver problemas en uno que pueda ser entendido por el computador.</p>
+<div class="section" id="algoritmos">
+<h2>Algoritmos<a class="headerlink" href="#algoritmos" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>La informática se trata de computadores tanto como la astronomía se trata de telescopios. — <strong>Edsger Dijkstra</strong>.</p>
+</div></blockquote>
+<p>Al diseñar un programa, el desafío principal es crear y describir un procedimiento que esté completamente bien definido, que no tenga ambigüedades, y que efectivamente resuelva el problema.</p>
+<p>Así es como la programación no es tanto sobre computadores, sino sobre resolver problemas de manera estructurada. El objeto de estudio de la programación no son los programas, sino los algoritmos.</p>
+<p>Un <strong>algoritmo</strong> es un procedimiento bien definido para resolver un problema. Todo el mundo conoce y utiliza algoritmos a diario, incluso sin darse cuenta:</p>
+<p><strong>a) Una receta</strong></p>
+<p>Una receta de cocina es un algoritmo; si bien podríamos cuestionar que algunos pasos son ambiguos (¿cuánto es «una pizca de sal»? ¿qué significa «agregar a gusto»?), en general las instrucciones están lo suficientemente bien definidas para que uno las pueda seguir sin problemas.</p>
+<p>La entrada de una receta son los ingredientes y algunos datos como: ¿para cuántas personas se cocinará? El proceso es la serie de pasos para manipular los ingredientes. La salida es el plato terminado.</p>
+<p>En principio, si una receta está suficientemente bien explicada, podría permitir preparar un plato a alguien que no sepa nada de cocina.</p>
+<p><strong>b) Método de multiplicar</strong></p>
+<p>El método para multiplicar números a mano que aprendimos en el colegio es un algoritmo. Dado cualquier par de números enteros, si seguimos paso a paso el procedimiento siempre obtendremos el producto:</p>
+<p>La entrada del algoritmo de multiplicación son los dos factores. El proceso es la secuencia de pasos en que los dígitos van siendo multiplicados las reservas van siendo sumadas, y los productos intermedios son finalmente sumados. La salida del algoritmo es el producto obtenido.</p>
+<div class="section" id="componentes-de-un-algoritmo">
+<h3>Componentes de un algoritmo<a class="headerlink" href="#componentes-de-un-algoritmo" title="Permalink to this headline">¶</a></h3>
+<p>Conceptualmente, un algoritmo tiene tres componentes:</p>
+<ul class="simple">
+<li><p><strong>entrada</strong>: son los datos sobre los que el algoritmo opera;</p></li>
+<li><p><strong>proceso</strong>: son los pasos que hay que seguir, utilizando la entrada;</p></li>
+<li><p><strong>salida</strong>: es el resultado que entrega el algoritmo.</p></li>
+</ul>
+<p>El proceso es una secuencia de sentencias, que debe ser realizada en orden. El proceso también puede tener ciclos (grupos de sentencias que son ejecutadas varias veces) y condicionales (grupos de sentencias que sólo son ejecutadas bajo ciertas condiciones).</p>
+</div>
+<div class="section" id="como-describir-un-algoritmo">
+<h3>Cómo describir un algoritmo<a class="headerlink" href="#como-describir-un-algoritmo" title="Permalink to this headline">¶</a></h3>
+<p>Consideremos un ejemplo sencillo: un algoritmo para resolver ecuaciones cuadráticas.</p>
+<p>Una ecuación cuadrática es una ecuación de la forma <span class="math notranslate nohighlight">\(ax^2+bx+c=0\)</span>, donde <span class="math notranslate nohighlight">\(a, b\)</span> y <span class="math notranslate nohighlight">\(c\)</span> son datos dados, con <span class="math notranslate nohighlight">\(a\neq0\)</span>, y <span class="math notranslate nohighlight">\(x\)</span> es la incógnita cuyo valor que se desea determinar.</p>
+<p>Por ejemplo, <span class="math notranslate nohighlight">\(2x^2−5x+2=0\)</span> es una ecuación cuadrática con <span class="math notranslate nohighlight">\(a=2\)</span>, <span class="math notranslate nohighlight">\(b=−5\)</span> y <span class="math notranslate nohighlight">\(c=2\)</span>. Sus soluciones son <span class="math notranslate nohighlight">\(x_1=1/2\)</span> y <span class="math notranslate nohighlight">\(x_2=2\)</span>, como se puede comprobar fácilmente al reemplazar estos valores en la ecuación. El problema es cómo obtener estos valores en primer lugar.</p>
+<p>El problema computacional de resolver una ecuación cuadrática puede ser planteado así:</p>
+<blockquote>
+<div><p>Dados <span class="math notranslate nohighlight">\(a, b\)</span> y <span class="math notranslate nohighlight">\(c\)</span>, entontrar los valores reales de <span class="math notranslate nohighlight">\(x\)</span> que satisfacen <span class="math notranslate nohighlight">\(ax^2+bx+c=0\)</span>.</p>
+</div></blockquote>
+<p>La entrada del algoritmo, pues, son los valores <span class="math notranslate nohighlight">\(a, b\)</span> y <span class="math notranslate nohighlight">\(c\)</span>, y la salida son las raíces reales <span class="math notranslate nohighlight">\(x\)</span> (que pueden ser cero, una o dos) de la ecuación. En un programa computacional, los valores de <span class="math notranslate nohighlight">\(a, b\)</span> y <span class="math notranslate nohighlight">\(c\)</span> deberían ser ingresados usando el teclado, y las soluciones <span class="math notranslate nohighlight">\(x\)</span> deberían ser mostradas a continuación en la pantalla.</p>
+<p>Al estudiar álgebra aprendemos un algoritmo para resolver este problema. Es lo suficientemente detallado para que pueda usarlo cualquier persona, incluso sin saber qué es una ecuación cuadrática, o para que lo pueda hacer un computador. A continuación veremos algunas maneras de describir el procedimiento.</p>
+<p><strong>Lenguaje natural</strong></p>
+<p>Durante el proceso mental de diseñar un algoritmo, es común pensar y describir los pasos en la misma manera en que hablamos a diario. Por ejemplo:</p>
+<blockquote>
+<div><p>Teniendo los valores de <span class="math notranslate nohighlight">\(a, b\)</span> y <span class="math notranslate nohighlight">\(c\)</span>, calcular el discriminante <span class="math notranslate nohighlight">\(D=b^2−4ac\)</span>. Si es discriminante es negativo, entonces la ecuación no tiene soluciones reales. Si es discriminante es igual a cero, entonces la ecuación tiene una única solución real, que es <span class="math notranslate nohighlight">\(x=−b/2a\)</span>. Si el discriminante es positivo, entonces la ecuación tiene dos soluciones reales, que son <span class="math notranslate nohighlight">\(x_1=(−b−\sqrt{D})/2a\)</span> y <span class="math notranslate nohighlight">\(x_2=(−b+\sqrt{D})/2a\)</span>.</p>
+</div></blockquote>
+<p>Esta manera de expresar un algoritmo no es ideal, ya que el lenguaje natural es:</p>
+<ul class="simple">
+<li><p><strong>impreciso</strong>: puede tener ambigüedades;</p></li>
+<li><p><strong>no universal</strong>: personas distintas describirán el proceso de maneras distintas; y</p></li>
+<li><p><strong>no estructurado</strong>: la descripción no está expresada en función de componentes simples.</p></li>
+</ul>
+<p>Aún así, es posible identificar los pasos del algoritmo. Por ejemplo, hay que evaluar la expresión <span class="math notranslate nohighlight">\(b^2−4ac\)</span>, y ponerle el nombre <span class="math notranslate nohighlight">\(D\)</span> a su resultado. Esto se llama asignación, y es un tipo de instrucción que aparece en casi todos los algoritmos. Después de eso, el algoritmo puede usar el nombre <span class="math notranslate nohighlight">\(D\)</span> para referirse al valor calculado.</p>
+<p><strong>Diagrama de flujo</strong>
+Un diagrama de flujo es una representación gráfica de un algoritmo. Los pasos son representados por varios tipos de bloques, y el flujo de ejecución es indicado por flechas que conectan los bloques:</p>
+<a class="reference internal image-reference" href="python_intro/images/flujo.png"><img alt="" class="align-center" src="python_intro/images/flujo.png" style="width: 360px; height: 360px;" /></a>
+<p>El inicio y el final del algoritmo son representados con bloques circulares. El algoritmo siempre debe ser capaz llegar desde uno hasta el otro, sin importar por qué camino lo hace. Un algoritmo no puede «quedarse pegado» en la mitad.</p>
+<p>La entrada y la salida de datos son representadas con romboides, que en la figura de arriba están pintados de verde.</p>
+<p>Los diamantes representan condiciones en las que el algoritmo sigue uno de dos caminos. que están etiquetados con sí o no, dependiendo si la condición es verdadera o falsa.</p>
+<p>También puede haber ciclos, representados por flechas que regresan a bloques anteriores. En este ejemplo, no hay ciclos.</p>
+<p>Otras sentencias van dentro de rectángulos, que en la figura están pintados de azul. En este ejemplo, las sentencias son asignaciones, representadas en la forma <code class="docutils literal notranslate"><span class="pre">nombre</span> <span class="pre">=</span> <span class="pre">valor</span></code>.</p>
+<p>Los diagramas de flujo no son usados en la práctica para programar, pero son útiles para ilustrar cómo funcionan algoritmos sencillos.</p>
+<p><strong>Pseudocódigo</strong></p>
+<p>El pseudocódigo es una descripción estructurada de un algoritmo basada en ciertas convenciones notacionales. Si bien es muy parecido al código que finalmente se escribirá en el computador, el pseudocódigo está pensado para ser leído por humanos.</p>
+<p>Una manera de escribir el algoritmo para la ecuación cuadrática en pseudocódigo es la siguiente:</p>
+<div class="highlight-terminal notranslate"><div class="highlight"><pre><span></span>leer a
+leer b
+leer c
+
+discriminante = b² - 4ac
+
+si discriminante &lt; 0:
+    escribir &#39;La ecuación no tiene soluciones reales&#39;
+
+o si no, si discriminante = 0:
+    x = -b / 2a
+    escribir &#39;La solución única es&#39;, x
+
+o si no:
+    x1 = (-b - √discriminante) / 2a
+    x2 = (-b + √discriminante) / 2a
+    escribir &#39;Las dos soluciones reales son:&#39;
+    escribir x1
+    escribir x2
+</pre></div>
+</div>
+<p>Las líneas que comienzan con <code class="docutils literal notranslate"><span class="pre">leer</span></code> y <code class="docutils literal notranslate"><span class="pre">escribir</span></code> denotan, respectivamente, la entrada y la salida del programa. Los diferentes casos son representados usando sentencias <code class="docutils literal notranslate"><span class="pre">si</span></code> y o <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">no</span></code>. Las asignaciones siguen la misma notación que en el caso de los diagramas de flujo.</p>
+<p>La notación de pseudocódigo es bien liberal. Uno puede mezclar notación de matemáticas con frases en español, siempre que quede absolutamente claro para el lector qué representa cada una de las líneas del algoritmo.</p>
+<p><strong>Código</strong></p>
+<p>El producto final de la programación siempre debe ser código que pueda ser ejecutado en el computador. Esto requiere describir los algoritmos en un lenguaje de programación. Los lenguajes de programación definen un conjunto limitado de conceptos básicos, en función de los cuales uno puede expresar cualquier algoritmo.</p>
+<p>En esta asignatura, usaremos el lenguaje de programación <a class="reference external" href="https://www.python.org/">Python</a> para escribir nuestros programas.</p>
+<p>El código en Python para resolver la ecuación cuadrática es el siguiente:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">raw_input</span><span class="p">(</span><span class="s1">&#39;Ingrese a: &#39;</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">raw_input</span><span class="p">(</span><span class="s1">&#39;Ingrese b: &#39;</span><span class="p">))</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">raw_input</span><span class="p">(</span><span class="s1">&#39;Ingrese c: &#39;</span><span class="p">))</span>
+
+<span class="n">discriminante</span> <span class="o">=</span> <span class="n">b</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">a</span> <span class="o">*</span> <span class="n">c</span>
+<span class="k">if</span> <span class="n">discriminante</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s1">&#39;La ecuacion no tiene soluciones reales&#39;</span>
+<span class="k">elif</span> <span class="n">discriminante</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="n">b</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="s1">&#39;La solucion unica es x =&#39;</span><span class="p">,</span> <span class="n">x</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">x1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">-</span> <span class="p">(</span><span class="n">discriminante</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">)</span>
+    <span class="n">x2</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">+</span> <span class="p">(</span><span class="n">discriminante</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="s1">&#39;Las dos soluciones reales son:&#39;</span>
+    <span class="nb">print</span> <span class="s1">&#39;x1 =&#39;</span><span class="p">,</span> <span class="n">x1</span>
+    <span class="nb">print</span> <span class="s1">&#39;x2 =&#39;</span><span class="p">,</span> <span class="n">x2</span>
+
+<span class="n">raw_input</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>A partir de ahora, usted aprenderá a entender, escribir y ejecutar códigos como éste.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./python_intro"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">Bienvenido(a) a python_intro!</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Francisco Alfaro Medina<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-177357392-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </body>
+</html>
