@@ -8,9 +8,7 @@ jobs:
         python-version: [3.8]
     steps:
       - name: Set up Python ${{ matrix.python-version }}
-      - run:  ${{ matrix.python-version }}
+      - run:  python --version
       - name: Install dependencies
-      - run:  |
-          python --version
-          pip install poetry
+      - run:  pip install poetry
 
