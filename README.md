@@ -1,8 +1,7 @@
 # Introducción a python
 
-<a href="https://faam.gitlab.io/python_intro/"><img alt="Link a la Documentación" src="https://img.shields.io/badge/docs-link-brightgreen"></a>
-[![pipeline status](https://gitlab.com/FAAM/python_intro/badges/master/pipeline.svg)](https://gitlab.com/FAAM/python_intro_ds/-/commits/master)
-
+<a href="https://fralfaro.github.io/jupytebook/"><img alt="Link a la Documentación" src="https://img.shields.io/badge/docs-link-brightgreen"></a>
+![example workflow](https://github.com/fralfaro/jupytebook/actions/workflows/github-actions-demo.yml/badge.svg)
 
 ## Identificación de la asignatura
 
