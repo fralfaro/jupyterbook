@@ -1,0 +1,8 @@
+- file: index
+
+- part: Introducción
+  chapters:
+  - file: python_intro/intro_progra.md
+  - file: python_intro/introduccion.md
+
+
