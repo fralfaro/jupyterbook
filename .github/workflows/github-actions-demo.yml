@@ -2,7 +2,10 @@ name: GitHub Actions
 on: [push]
 jobs:
   Pages:
-    runs-on: python:3.8
+    runs-on: ubuntu-latest
+      strategy:
+        matrix:
+          python-version: [3.8 ]
     steps:
       - run:  python --version
       - run:  pip install poetry
