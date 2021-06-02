@@ -5,10 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.8]
+        python-version: [3.8 ]
     steps:
-      - name: Set up Python ${{ matrix.python-version }}
-      - run:  python --version
       - name: Install dependencies
-      - run:  pip install poetry
+        run:  |
+          python --version
+          pip install poetry
 
