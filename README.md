@@ -1,8 +1,7 @@
 # Introducción a python
 
 <a href="https://fralfaro.github.io/jupytebook/"><img alt="Link a la Documentación" src="https://img.shields.io/badge/docs-link-brightgreen"></a>
-![example workflow](https://github.com/fralfaro/jupytebook/actions/workflows/github-actions-demo.yml/badge.svg)
-
+[![YourActionName Actions Status](https://github.com/fralfaro/jupytebook/actions/workflows/github-actions-demo.yml/badge.svg)](https://github.com/fralfaro/jupytebook/actions)
 ## Identificación de la asignatura
 
 * **Asignatura**: Introducción a Python
