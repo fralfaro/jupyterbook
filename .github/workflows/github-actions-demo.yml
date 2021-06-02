@@ -3,10 +3,11 @@ on: [push]
 jobs:
   Pages:
     runs-on: ubuntu-latest
-      strategy:
-        matrix:
-          python-version: [3.8 ]
+    strategy:
+      matrix:
+        python-version: [3.8 ]
     steps:
-      - run:  python --version
-      - run:  pip install poetry
-      - run:  poetry install
+      - run:  |
+          python --version
+          pip install poetry
+
