@@ -3,6 +3,6 @@
 - part: Introducción
   chapters:
   - file: python_intro/intro_progra.md
-  - file: python_intro/introduccion.md
+  - file: python_intro/basico.ipynb
 
 
